@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>늘봄 문화센터 | 봄날의 꽃 피는 배움</title>
+    <title>늘봄 문화센터 | 늘봄문화센터 - 봄날의 꽃 피는 배움</title>
+    
+    <!-- 네이버 검색 최적화(SEO) 및 사이트 정보 -->
+    <meta name="description" content="삼전역 도보 3분, 늘봄문화센터에서 시작하는 화사한 봄 강좌. 수채화, 요가, 사진 등 다양한 배움의 즐거움을 만나보세요.">
+    <meta name="keywords" content="삼전문화센터, 늘봄문화센터, 송파구문화센터, 삼전역취미, 성인취미미술, 요가클래스">
+    <link rel="canonical" href="https://neulbomcenter.kr">
+    
+    <!-- Open Graph (카톡/SNS 공유 시 보이는 정보) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="삼전 문화센터 | 늘봄문화센터">
+    <meta property="og:description" content="일상에 배움의 꽃이 피어나는 공간, 삼전역 앞 늘봄문화센터입니다.">
+    <meta property="og:url" content="https://neulbomcenter.kr">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&q=80&w=800">
+    
+    <!-- 네이버 사이트 소유 확인 태그 -->
+    <meta name="naver-site-verification" content="3f31be3b31492f8f05e260a4b66ace42302efb37" />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -117,60 +133,116 @@
                     <div class="rounded-[3.5rem] overflow-hidden shadow-2xl border-8 border-white transform rotate-2">
                         <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&q=80&w=800" alt="벚꽃 풍경" class="w-full h-[500px] object-cover">
                     </div>
-                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl border border-pink-50 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-500">
-                            <i data-lucide="sparkles"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm font-bold">봄맞이 이벤트</p>
-                            <p class="text-xs text-gray-400">교재비 10% 지원</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 강좌 소개 -->
+    <!-- 센터 소개 섹션 (id="about") -->
+    <section id="about" class="py-32 bg-pink-50/30">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold serif-font mb-8 text-gray-800">늘봄문화센터를<br>소개합니다</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6 break-keep text-lg">
+                        늘봄문화센터는 지역 주민들이 일상 속에서 예술과 문화를 즐기며 소통할 수 있는 따뜻한 쉼터입니다. 전문 강사진과 함께하는 체계적인 교육 프로그램을 통해 여러분의 숨겨진 재능을 발견해 보세요.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-3xl shadow-sm border border-pink-100">
+                            <p class="text-pink-500 font-bold text-2xl mb-1">50+</p>
+                            <p class="text-sm text-gray-400">다양한 강좌</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-3xl shadow-sm border border-pink-100">
+                            <p class="text-pink-500 font-bold text-2xl mb-1">1000+</p>
+                            <p class="text-sm text-gray-400">누적 수강생</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400" alt="수업 전경" class="rounded-3xl w-full h-40 object-cover shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400" alt="요가실" class="rounded-3xl w-full h-40 object-cover mt-8 shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 강좌 소개 섹션 (id="programs") -->
     <section id="programs" class="py-32 bg-white">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold serif-font text-gray-800 mb-20">인기 강좌 안내</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- 카드 1 -->
-                <div class="sakura-card p-5 text-left">
+                <article class="sakura-card p-5 text-left">
                     <div class="rounded-[2rem] overflow-hidden mb-6 h-52 bg-pink-50">
-                        <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&q=80&w=600" alt="수채화" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&q=80&w=600" alt="수채화 강좌" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 serif-font">감성 수채화 클래스</h3>
                     <p class="text-gray-500 text-sm mb-6">분홍빛 벚꽃의 번짐을 도화지에 담아보는 시간입니다.</p>
                     <div class="flex justify-between items-center text-pink-500 font-bold">
                         <span class="text-xs text-gray-400 font-normal">매주 수요일 오후 2시</span>
-                        <span>수강신청</span>
+                        <span class="cursor-pointer hover:underline">수강신청</span>
                     </div>
-                </div>
+                </article>
                 <!-- 카드 2 -->
-                <div class="sakura-card p-5 text-left">
+                <article class="sakura-card p-5 text-left">
                     <div class="rounded-[2rem] overflow-hidden mb-6 h-52 bg-pink-50">
-                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=600" alt="요가" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=600" alt="요가 강좌" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 serif-font">힐링 플로우 요가</h3>
                     <p class="text-gray-500 text-sm mb-6">굳어있던 몸을 깨우고 마음의 안정을 찾는 힐링 시간.</p>
                     <div class="flex justify-between items-center text-pink-500 font-bold">
                         <span class="text-xs text-gray-400 font-normal">매주 화, 목 오후 7시</span>
-                        <span>수강신청</span>
+                        <span class="cursor-pointer hover:underline">수강신청</span>
                     </div>
-                </div>
+                </article>
                 <!-- 카드 3 -->
-                <div class="sakura-card p-5 text-left">
+                <article class="sakura-card p-5 text-left">
                     <div class="rounded-[2rem] overflow-hidden mb-6 h-52 bg-pink-50">
-                        <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=600" alt="사진" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=600" alt="사진 강좌" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 serif-font">스마트폰 사진 비법</h3>
                     <p class="text-gray-500 text-sm mb-6">벚꽃 나들이에서 인생 사진을 남기는 특별한 노하우.</p>
                     <div class="flex justify-between items-center text-pink-500 font-bold">
                         <span class="text-xs text-gray-400 font-normal">매주 토요일 오전 10시</span>
-                        <span>수강신청</span>
+                        <span class="cursor-pointer hover:underline">수강신청</span>
                     </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 오시는 길 섹션 (id="location") -->
+    <section id="location" class="py-32 bg-pink-50/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="sakura-card overflow-hidden bg-white flex flex-col lg:flex-row shadow-2xl">
+                <div class="lg:w-1/2 p-12 md:p-16">
+                    <h2 class="text-4xl font-bold serif-font mb-10 text-gray-800">오시는 길</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 shrink-0">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">위치 안내</h4>
+                                <p class="text-gray-500">서울특별시 송파구 백제고분로 000, 3층</p>
+                                <p class="text-pink-400 text-sm mt-1 font-medium">9호선 삼전역 1번 출구 도보 3분</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 shrink-0">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">상담 및 문의</h4>
+                                <p class="text-2xl font-bold text-pink-500">02-1234-5678</p>
+                                <p class="text-gray-400 text-xs mt-1">평일 09:30 - 18:30 (주말 별도 운영)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 min-h-[400px]">
+                    <!-- 지도 영역 대체 이미지 -->
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800" alt="지도 미리보기" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -189,9 +261,9 @@
     <script>
         lucide.createIcons();
 
-        // 간단한 꽃잎 생성 스크립트
+        // 꽃잎 생성 스크립트
         const container = document.getElementById('petals');
-        for(let i=0; i<15; i++) {
+        for(let i=0; i<20; i++) {
             const petal = document.createElement('div');
             petal.style.cssText = `
                 position: absolute;
@@ -202,7 +274,7 @@
                 background: #ffdae0;
                 border-radius: 100% 0 100% 0;
                 opacity: 0.7;
-                animation: fall ${5 + Math.random() * 5}s linear infinite;
+                animation: fall ${5 + Math.random() * 7}s linear infinite;
                 animation-delay: ${Math.random() * 5}s;
             `;
             container.appendChild(petal);
