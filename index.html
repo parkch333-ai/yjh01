@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>늘봄 문화센터 | 늘봄문화센터 - 봄날의 꽃 피는 배움</title>
     
-    <!-- 네이버 검색 최적화(SEO) 및 사이트 정보 -->
-    <meta name="description" content="삼전역 도보 3분, 늘봄문화센터에서 시작하는 화사한 봄 강좌. 수채화, 요가, 사진 등 다양한 배움의 즐거움을 만나보세요.">
-    <meta name="keywords" content="삼전문화센터, 늘봄문화센터, 송파구문화센터, 삼전역취미, 성인취미미술, 요가클래스">
-    <link rel="canonical" href="https://neulbomcenter.kr">
+    <!-- [SEO] 네이버 검색 결과 최적화 -->
+    <title>늘봄문화센터 | 늘봄 문화 센터 - 송파구 삼전동 문화센터</title>
+    <meta name="description" content="송파구 삼전역 앞 늘봄문화센터(늘봄 문화 센터)입니다. 수채화, 요가, 사진 등 다양한 봄 강좌 모집 중. 늘범 문화센터를 찾는 분들을 위한 최고의 배움 공간.">
+    <meta name="keywords" content="늘봄문화센터, 늘봄 문화 센터, 늘봄문화 센터, 늘범 문화센터, 송파구 문화센터, 삼전동 문화센터, 삼전역 문화센터, 송파구 취미">
     
-    <!-- Open Graph (카톡/SNS 공유 시 보이는 정보) -->
+    <link rel="canonical" href="https://www.neulbomcenter.kr">
+    
+    <!-- SNS 공유 정보 (Open Graph) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="삼전 문화센터 | 늘봄문화센터">
+    <meta property="og:title" content="늘봄문화센터 | 늘봄 문화 센터">
     <meta property="og:description" content="일상에 배움의 꽃이 피어나는 공간, 삼전역 앞 늘봄문화센터입니다.">
-    <meta property="og:url" content="https://neulbomcenter.kr">
+    <meta property="og:url" content="https://www.neulbomcenter.kr">
     <meta property="og:image" content="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&q=80&w=800">
     
     <!-- 네이버 사이트 소유 확인 태그 -->
     <meta name="naver-site-verification" content="3f31be3b31492f8f05e260a4b66ace42302efb37" />
 
-    <!-- Tailwind CSS -->
+    <!-- [라이브러리 로드] 디자인과 아이콘을 위해 반드시 필요합니다 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
     <style>
         :root {
             --sakura-pink: #ffdae0;
@@ -38,16 +38,12 @@
             background-color: var(--sakura-bg);
             color: #4a393d;
         }
-        .serif-font {
-            font-family: 'Gowun Batang', serif;
-        }
-        /* 배경 벚꽃 패턴 효과 */
+        .serif-font { font-family: 'Gowun Batang', serif; }
         .cherry-pattern {
             background-color: var(--sakura-bg);
             background-image: radial-gradient(#f8a5c2 0.5px, transparent 0.5px);
             background-size: 30px 30px;
         }
-        /* 부드러운 카드 스타일 */
         .sakura-card {
             background: white;
             border-radius: 2.5rem;
@@ -63,26 +59,29 @@
             background: rgba(255, 250, 251, 0.8);
             backdrop-filter: blur(12px);
         }
-        /* 벚꽃잎 애니메이션 */
         @keyframes fall {
             0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
             100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
         }
         .petal-container {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 5;
-            overflow: hidden;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 5; overflow: hidden;
+        }
+        .btn-naver {
+            background-color: #03C75A;
+            transition: all 0.2s ease;
+        }
+        .btn-naver:hover {
+            background-color: #02b351;
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px -5px rgba(3, 199, 90, 0.4);
         }
     </style>
 </head>
 <body>
 
-    <!-- 꽃잎 효과 레이어 -->
+    <!-- 벚꽃 애니메이션 배경 -->
     <div class="petal-container" id="petals"></div>
 
     <!-- 네비게이션 -->
@@ -97,8 +96,6 @@
                     <a href="#about" class="text-gray-600 hover:text-pink-500 font-medium transition">센터 소개</a>
                     <a href="#programs" class="text-gray-600 hover:text-pink-500 font-medium transition">봄 강좌 안내</a>
                     <a href="#location" class="text-gray-600 hover:text-pink-500 font-medium transition">오시는 길</a>
-                    
-                    </a>
                 </div>
             </div>
         </div>
@@ -113,38 +110,38 @@
                         🌸 2026 봄 학기 수강생 선착순 모집
                     </span>
                     <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-8 leading-[1.2] serif-font break-keep">
-                        일상에 기분 좋은<br>
-                        <span class="text-pink-500">배움의 꽃</span>이 피어납니다
+                        <span class="text-pink-500">늘봄 문화센터</span><br>
+                        배움의 꽃이 피어납니다
                     </h1>
                     <p class="text-lg md:text-xl text-gray-500 mb-12 max-w-xl mx-auto lg:mx-0 break-keep">
-                        따뜻한 봄바람과 함께 시작하는 새로운 취미. 삼전역 도보 3분 거리에서 당신의 감수성을 깨워보세요.
+                        따뜻한 봄바람과 함께 시작하는 새로운 취미. 삼전역 도보 1분 거리 <strong>늘봄문화센터</strong>에서 당신의 감수성을 깨워보세요.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
                         <a href="#programs" class="bg-pink-500 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-pink-600 transition shadow-xl shadow-pink-100">
                             강좌 살펴보기
                         </a>
                         <a href="#location" class="bg-white text-pink-500 border-2 border-pink-100 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-pink-50 transition">
-                            센터 위치
+                            센터 위치 확인
                         </a>
                     </div>
                 </div>
                 <div class="lg:w-1/2 relative">
                     <div class="rounded-[3.5rem] overflow-hidden shadow-2xl border-8 border-white transform rotate-2">
-                        <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&q=80&w=800" alt="벚꽃 풍경" class="w-full h-[500px] object-cover">
+                        <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&q=80&w=800" alt="늘봄 문화센터 전경" class="w-full h-[500px] object-cover">
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 센터 소개 섹션 (id="about") -->
+    <!-- 소개 섹션 -->
     <section id="about" class="py-32 bg-pink-50/30">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="md:w-1/2">
                     <h2 class="text-4xl font-bold serif-font mb-8 text-gray-800">늘봄문화센터를<br>소개합니다</h2>
                     <p class="text-gray-600 leading-relaxed mb-6 break-keep text-lg">
-                        늘봄문화센터는 지역 주민들이 일상 속에서 예술과 문화를 즐기며 소통할 수 있는 따뜻한 쉼터입니다. 전문 강사진과 함께하는 체계적인 교육 프로그램을 통해 여러분의 숨겨진 재능을 발견해 보세요.
+                        <strong>늘봄 문화 센터</strong>는 송파구 삼전동 주민들이 일상 속에서 예술과 문화를 즐기며 소통할 수 있는 따뜻한 쉼터입니다. 전문 강사진과 함께하는 체계적인 교육 프로그램을 통해 여러분의 숨겨진 재능을 발견해 보세요.
                     </p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-white p-6 rounded-3xl shadow-sm border border-pink-100">
@@ -158,49 +155,46 @@
                     </div>
                 </div>
                 <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400" alt="수업 전경" class="rounded-3xl w-full h-40 object-cover shadow-md">
-                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400" alt="요가실" class="rounded-3xl w-full h-40 object-cover mt-8 shadow-md">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400" alt="문화센터 수업" class="rounded-3xl w-full h-40 object-cover shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400" alt="요가 강좌" class="rounded-3xl w-full h-40 object-cover mt-8 shadow-md">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 강좌 소개 섹션 (id="programs") -->
+    <!-- 강좌 섹션 -->
     <section id="programs" class="py-32 bg-white">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold serif-font text-gray-800 mb-20">인기 강좌 안내</h2>
+            <h2 class="text-4xl font-bold serif-font text-gray-800 mb-20">늘봄 문화 센터 인기 강좌</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- 카드 1 -->
                 <article class="sakura-card p-5 text-left">
                     <div class="rounded-[2rem] overflow-hidden mb-6 h-52 bg-pink-50">
-                        <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&q=80&w=600" alt="수채화 강좌" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&q=80&w=600" alt="수채화" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 serif-font">감성 수채화 클래스</h3>
-                    <p class="text-gray-500 text-sm mb-6">분홍빛 벚꽃의 번짐을 도화지에 담아보는 시간입니다.</p>
+                    <p class="text-gray-500 text-sm mb-6">늘봄문화센터의 시그니처, 분홍빛 벚꽃의 번짐을 도화지에 담아보는 시간입니다.</p>
                     <div class="flex justify-between items-center text-pink-500 font-bold">
                         <span class="text-xs text-gray-400 font-normal">매주 수요일 오후 2시</span>
                         <span class="cursor-pointer hover:underline">수강신청</span>
                     </div>
                 </article>
-                <!-- 카드 2 -->
                 <article class="sakura-card p-5 text-left">
                     <div class="rounded-[2rem] overflow-hidden mb-6 h-52 bg-pink-50">
-                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=600" alt="요가 강좌" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=600" alt="요가" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 serif-font">힐링 플로우 요가</h3>
-                    <p class="text-gray-500 text-sm mb-6">굳어있던 몸을 깨우고 마음의 안정을 찾는 힐링 시간.</p>
+                    <p class="text-gray-500 text-sm mb-6">삼전동 늘봄문화센터에서 굳어있던 몸을 깨우고 마음의 안정을 찾으세요.</p>
                     <div class="flex justify-between items-center text-pink-500 font-bold">
                         <span class="text-xs text-gray-400 font-normal">매주 화, 목 오후 7시</span>
                         <span class="cursor-pointer hover:underline">수강신청</span>
                     </div>
                 </article>
-                <!-- 카드 3 -->
                 <article class="sakura-card p-5 text-left">
                     <div class="rounded-[2rem] overflow-hidden mb-6 h-52 bg-pink-50">
-                        <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=600" alt="사진 강좌" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format&fit=crop&q=80&w=600" alt="사진" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 serif-font">스마트폰 사진 비법</h3>
-                    <p class="text-gray-500 text-sm mb-6">벚꽃 나들이에서 인생 사진을 남기는 특별한 노하우.</p>
+                    <p class="text-gray-500 text-sm mb-6">일상의 기록도 늘봄 문화 센터와 함께라면 예술이 됩니다.</p>
                     <div class="flex justify-between items-center text-pink-500 font-bold">
                         <span class="text-xs text-gray-400 font-normal">매주 토요일 오전 10시</span>
                         <span class="cursor-pointer hover:underline">수강신청</span>
@@ -210,37 +204,57 @@
         </div>
     </section>
 
-    <!-- 오시는 길 섹션 (id="location") -->
+    <!-- 오시는 길 -->
     <section id="location" class="py-32 bg-pink-50/50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="sakura-card overflow-hidden bg-white flex flex-col lg:flex-row shadow-2xl">
-                <div class="lg:w-1/2 p-12 md:p-16">
-                    <h2 class="text-4xl font-bold serif-font mb-10 text-gray-800">오시는 길</h2>
-                    <div class="space-y-8">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold serif-font text-gray-800 mb-4">오시는 길</h2>
+                <p class="text-gray-500 text-lg">삼전역 4번 출구에서 1분 거리에 위치하고 있습니다.</p>
+            </div>
+            
+            <div class="sakura-card bg-white shadow-2xl border-none p-10 md:p-16 text-center">
+                <div class="max-w-2xl mx-auto">
+                    <!-- 상세 위치 및 문의처 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12 text-left">
                         <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 shrink-0">
-                                <i data-lucide="map-pin"></i>
+                            <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 shrink-0">
+                                <i data-lucide="map-pin" class="w-7 h-7"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1">위치 안내</h4>
-                                <p class="text-gray-500">서울특별시 송파구 잠실동 340</p>
-                                <p class="text-pink-400 text-sm mt-1 font-medium">9호선 삼전역 4번 출구 도보 1분</p>
+                                <h4 class="font-bold text-xl mb-1 text-gray-800">센터 주소</h4>
+                                <p class="text-gray-600">서울특별시 송파구 잠실동 340</p>
+                                <p class="text-pink-500 text-sm font-bold mt-2">삼전역 4번 출구 도보 1분</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 shrink-0">
-                                <i data-lucide="clock"></i>
+                            <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-500 shrink-0">
+                                <i data-lucide="phone" class="w-7 h-7"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1">상담 시간</h4>
-                                <p class="text-gray-400 text-xs mt-1">평일 09:30 - 18:30 (주말 별도 운영)</p>
+                                <h4 class="font-bold text-xl mb-1 text-gray-800">문의 전화</h4>
+                                <p class="text-gray-600 text-lg font-bold">02-1234-5678</p>
+                                <p class="text-gray-400 text-xs mt-1 italic">상담가능: 평일 09:30~18:30</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="lg:w-1/2 min-h-[400px]">
-                    <!-- 지도 영역 대체 이미지 -->
-                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800" alt="지도 미리보기" class="w-full h-full object-cover">
+
+                    <!-- [중요] 네이버 지도 연결 버튼 -->
+                    <div class="bg-gray-50 rounded-[2.5rem] p-10 md:p-14 border border-gray-100">
+                        <div class="mb-8">
+                            <p class="text-gray-700 text-xl font-medium mb-2 serif-font">실시간 지도로 더 정확하게 찾기</p>
+                            <p class="text-gray-400 text-sm">네이버 지도를 통해 길찾기를 시작해 보세요.</p>
+                        </div>
+                        
+                        <a href="https://map.naver.com/v5/search/서울특별시%20송파구%20잠실동%20340" target="_blank" class="btn-naver inline-flex items-center justify-center gap-3 text-white px-12 py-5 rounded-2xl font-bold text-xl w-full md:w-auto shadow-lg shadow-green-100">
+                            <i data-lucide="navigation" class="w-6 h-6"></i>
+                            네이버 지도 앱에서 보기
+                        </a>
+                        
+                        <div class="mt-8 flex justify-center gap-6 text-gray-400 text-xs">
+                            <span class="flex items-center gap-1"><i data-lucide="check" class="w-3 h-3"></i> 실시간 경로 안내</span>
+                            <span class="flex items-center gap-1"><i data-lucide="check" class="w-3 h-3"></i> 지하철/버스 노선</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -252,14 +266,15 @@
             <i data-lucide="flower-2" class="w-6 h-6"></i>
             늘봄 문화센터
         </h3>
-        <p class="text-sm text-gray-400">송파구 잠실동 340 </p>
-        <p class="text-xs text-gray-300 mt-10">© 2026 Sanjeon Culture Center. All rights reserved.</p>
+        <p class="text-sm text-gray-400">송파구 잠실동 340 (삼전동) | 늘봄문화센터 공식 홈페이지 </p>
+        <p class="text-xs text-gray-300 mt-10">© 2026 Neulbom Culture Center. All rights reserved.</p>
     </footer>
 
     <script>
+        // 아이콘 활성화
         lucide.createIcons();
 
-        // 꽃잎 생성 스크립트
+        // 벚꽃 떨어지는 효과
         const container = document.getElementById('petals');
         for(let i=0; i<20; i++) {
             const petal = document.createElement('div');
